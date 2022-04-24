@@ -23,12 +23,12 @@ ExtClient()
 NewClient()
 {
         read -p "enter the client name :" client
-        mkdir -p /home/cbn/psh/${client}
+        mkdir -p /home/cbn/psh_extcli/${client}
         groupadd ${client}
-        chmod g+s /home/cbn/psh/${client}
-        setfacl -m g:${client}:rx /home/cbn/psh/${client}
-        setfacl -d -m g:${client}:rx /home/cbn/psh/${client}
-        chgrp -R testgrp /home/cbn/psh/${client}
+        chmod g+s /home/cbn/psh_extcli/${client}
+        setfacl -m g:${client}:rx /home/cbn/psh_extcli/${client}
+        setfacl -d -m g:${client}:rx /home/cbn/psh_extcli/${client}
+        chgrp -R testgrp /home/cbn/psh_extcli/${client}
 }
 
 if [ ${numb} == 1 ]
